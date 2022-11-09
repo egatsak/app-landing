@@ -1,0 +1,82 @@
+#d8e3fe
+#697ca6
+#6188ff
+#8d96bd
+#7a85ad
+#efeff7
+#d2e1ff -
+#3a79ff
+#d2e1ff
+#ffd7d7 -
+#d43f3f
+#ffd7d7
+#4c85ff
+#fff;
+
+
+#d2e1ff
+#565f82
+#e8ecf4 //-
+#7382a3
+#e8ecf4
+#adb4b2 -
+#d1d1e4 -
+#adb4b2
+#d1d1e4
+#c7d3ff -
+#a0b4ff -
+#c7d3ff
+#a0b4ff
+#3d4f9f
+#d1d6e3
+#5283ff
+#5e81fe
+#f4f7ff
+#ffffff
+#c9e1d7
+#f5f8ff
+#dae4fe-
+#f1f5ff
+#4074f8
+#dae4fe
+#e9efff
+#fff
+ 
+#6888ff
+#5e80ff
+#f5f8ff -
+#fff
+ 
+#d8e3fe- 
+#eff4ff
+#e5ebf8
+#fff
+#ffc735
+#ff3535
+#35aaff
+#eaebff
+#f6f9ff
+#fff;
+ 
+#d8e3fe 
+#f3f5fa
+#676f95
+#fff;
+ 
+#d8e3fe
+#495274 -
+
+#495274
+
+#8e96b7
+#6888ff -
+#5e80ff
+#fff;
+ 
+#fff;
+ 
+#fff;
+ 
+#fcfdff
+#3d4f9f -
+#aeb8d0
