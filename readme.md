@@ -1,6 +1,6 @@
 # LANDING APP
 
-## Desktop layout
+## Desktop & mobile adaptive layout
 
 Practising Flex & Grid layout, SCSS, responsive & adaptive design.
 
