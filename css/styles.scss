@@ -105,11 +105,11 @@ $color-secondary: $color-blue-200;
 // === COMMON ===
 html {
   @media (max-width: $breakpoint-md-max) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @media (max-width: $breakpoint-sm-max) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -944,19 +944,19 @@ h2 {
 
 .slider-blog {
   position: relative;
-}
-
-.slider-blog-container {
-  //position: relative;
   margin-bottom: $base * 25;
-  overflow: hidden;
-  background-color: $color-white;
-  border: 1px solid $color-gray-100;
-  box-shadow: 0 $base * 4 $base * 12 $color-gray-100;
 
   @media (max-width: $breakpoint-md-max) {
     margin-bottom: $base * 15;
   }
+}
+
+.slider-blog-container {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-white;
+  border: 1px solid $color-gray-100;
+  box-shadow: 0 $base * 4 $base * 12 $color-gray-100;
 }
 
 .slider-blog-wrapper {
@@ -1080,13 +1080,13 @@ h2 {
       margin-left: $base * 5;
 
       h3 {
-        margin-bottom: $base * 7;
+        margin-bottom: $base * 6;
         font-size: $fs-xl;
         color: $color-blue-900;
       }
 
       .text {
-        margin-bottom: $base * 10;
+        margin-bottom: $base * 6;
         font-size: $fs-s;
         line-height: 2;
       }
@@ -1155,6 +1155,7 @@ h2 {
 // === QUOTES ===
 .section-quotes {
   background-color: linear-gradient(#eaebff, $color-gray-50);
+  overflow: hidden;
 
   .section-inner {
     display: flex;
@@ -1165,14 +1166,19 @@ h2 {
       font-weight: $fw-medium;
     }
 
-    @media (max-width: $breakpoint-sm-max) {
+    @media (max-width: $breakpoint-md-max) {
       flex-direction: column;
     }
   }
 
   &__left,
   &__right {
-    flex-basis: 45%;
+    /* flex-basis: 45%; */
+    width: 45%;
+
+    @media (max-width: $breakpoint-md-max) {
+      width: 100%;
+    }
   }
 
   &__left {
@@ -1180,44 +1186,92 @@ h2 {
       line-height: 2;
     }
 
-    @media (max-width: $breakpoint-xs-max) {
+    /*  @media (max-width: $breakpoint-xs-max) {
       margin-bottom: $base * 10;
-    }
+    } */
+  }
+}
+
+.slider-quotes-container {
+  width: calc(50vw + 48px);
+  margin: -48px 0 $base * 10 -48px;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-md-max) {
+    width: 105vw;
+    margin-top: 0;
+    /*    margin-left: -$base * 5; */
   }
 }
 
 .slider-quotes {
   @include list-null();
 
-  margin-bottom: $base * 20;
+  display: flex;
 
   &__item {
-    position: relative;
-    padding: $base * 10 $base * 18 $base * 15 $base * 18;
-    background-color: $color-white;
-    border: 1px solid $color-gray-50;
-    box-shadow: 0 $base $base * 12 $color-gray-100;
+    /* flex-shrink: 1; */
+    /* min- */
+    width: 25vw;
+    padding: $base * 12;
+    box-sizing: border-box;
+    opacity: 0.5;
+    transition: opacity $transition;
 
-    &-text {
-      font-size: $fs-s;
-      line-height: 2;
-      color: $color-gray-800;
+    &.swiper-slide-active {
+      opacity: 1;
     }
 
-    &-photo {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: $base * 15;
-      height: $base * 15;
-      overflow: hidden;
-      background-color: $color-white;
-      border-radius: 100%;
-      transform: translate(-50%, -50%);
+    @media (max-width: $breakpoint-lg-max) {
+      padding-left: $base * 8;
+      padding-right: 0;
+    }
 
-      img {
-        height: inherit;
-      }
+    @media (max-width: $breakpoint-md-max) {
+      min-width: 50vw;
+    }
+
+    @media (max-width: $breakpoint-xs-max) {
+      padding-left: $base * 12;
+      padding-right: $base * 2;
+    }
+  }
+}
+
+.slider-quotes-item-content {
+  position: relative;
+  padding: $base * 10 $base * 17 $base * 15;
+  background-color: $color-white;
+  border: 1px solid $color-gray-50;
+  box-shadow: 0 $base $base * 12 $color-gray-100;
+
+  @media (max-width: 1599px) {
+    padding: $base * 5 $base * 8 $base * 7;
+  }
+
+  @media (max-width: $breakpoint-lg-max) {
+    padding: $base * 5 $base * 3 $base * 7;
+  }
+
+  &__text {
+    font-size: $fs-s;
+    line-height: 2;
+    color: $color-gray-800;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: $base * 15;
+    height: $base * 15;
+    overflow: hidden;
+    background-color: $color-white;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+
+    img {
+      height: inherit;
     }
   }
 }
@@ -1440,6 +1494,12 @@ h2 {
   font-size: $fs-xs;
   font-weight: $fw-medium;
   color: $color-gray-200;
+
+  & > {
+    :not(:first-child) {
+      margin-left: $base * 10;
+    }
+  }
 
   @media (max-width: $breakpoint-md-max) {
     margin-left: 0;

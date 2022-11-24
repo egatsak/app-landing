@@ -1,8 +1,3 @@
-// import Swiper JS
-/* import Swiper from "swiper"; */
-//import Swiper styles
-/* import "../node_modules/swiper/swiper.min.css"; */
-
 const header = document.querySelector(".section-header");
 const mainNavigation = document.getElementById("main-navigation");
 
@@ -70,37 +65,37 @@ const getScrollBarWidth = () => {
 new Swiper(".section-hero-image", {
   direction: "horizontal",
   loop: true,
-
   pagination: {
-    el: ".swiper-pagination",
+    el: ".section-hero-image .dots",
     clickable: true
   }
 });
 
 new Swiper(".slider-blog-container", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
-
-  // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".section-blog .dots",
     clickable: true
-    /*  renderBullet: function (index, className) {
-        console.log(className);
-        return (
-          '<span class="' + className + '">' + (index + 1) + "</span>"
-        ); */
   },
-
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    nextEl: ".section-blog .swiper-button-next",
+    prevEl: ".section-blog .swiper-button-prev"
   }
   /*
     // And if we need scrollbar
     scrollbar: {
       el: ".swiper-scrollbar"
     } */
+});
+
+new Swiper(".slider-quotes-container", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: "auto",
+  pagination: {
+    el: ".section-quotes .dots",
+    clickable: true
+  }
 });

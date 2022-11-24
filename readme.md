@@ -2,9 +2,13 @@
 
 ## Desktop & mobile adaptive layout
 
-Practising Flex & Grid layout, SCSS, responsive & adaptive design.
+Flex & Grid layout, SCSS, responsive & adaptive design.
+
+Implemented swipers, accordion and lightbox.
 
 [Deploy link at Github Pages](https://egatsak.github.io/app-landing/)
+
+[Deploy at Surge](https://landing-app.surge.sh/)
 
 ![Screenshot 2022-11-09 120144](https://user-images.githubusercontent.com/103357389/200772676-c6eb5580-cb9c-4f0f-a2a3-e5ac10bdabd0.png)
 
@@ -17,3 +21,7 @@ Based on a tutorial by [Vitaly Kirenkov](https://prosto-razrabotka.ru/)
 [SCSS](https://sass-lang.com/)
 
 [Normalize.css](https://necolas.github.io/normalize.css/)
+
+[Swiper.js](https://swiperjs.com/)
+
+[fslightbox.js](https://fslightbox.com/)
